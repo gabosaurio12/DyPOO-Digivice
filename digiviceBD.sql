@@ -1,3 +1,8 @@
+-- create database
+
+CREATE DATABASE IF NOT EXISTS digimonDB;
+USE digimonDB;
+
 -- create a table
 CREATE TABLE IF NOT EXISTS digimon (
   digimon_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
