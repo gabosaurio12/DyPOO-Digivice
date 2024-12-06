@@ -2,10 +2,10 @@ package mon.front;
 
 import javax.swing.*;
 
-public class DigiManager extends JFrame {
+public class Digivice extends JFrame {
     private JTextField searchBar;
 
-    public DigiManager() {
+    public Digivice() {
         setTitle("Digivice");
         setSize(220, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
