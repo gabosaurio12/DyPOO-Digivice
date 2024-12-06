@@ -28,12 +28,7 @@ public class CartaDigimon extends JFrame {
         JPanel topPanel = new JPanel(new BorderLayout());
 
         JButton backButton = new JButton("Volver");
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
+        backButton.addActionListener(e -> dispose());
 
         JLabel nameLabel = new JLabel(digimon.getName(), JLabel.CENTER);
 
