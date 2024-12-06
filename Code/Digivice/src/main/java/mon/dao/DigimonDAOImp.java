@@ -3,10 +3,14 @@ package mon.dao;
 import mon.database.DataBaseConnection;
 import mon.model.Digimon;
 
+import javax.xml.crypto.Data;
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DigimonDAOImp implements DigimonDAO  {
     private final String tableName = "digimon";
@@ -63,5 +67,28 @@ public class DigimonDAOImp implements DigimonDAO  {
         PreparedStatement ps = connection.prepareStatement(query);
         ps.setInt(1, digimon.getId());
         ps.executeUpdate();
+    }
+
+    @Override
+    public List<Digimon> readAllDigimon() throws SQLException {
+        Connection connection = DataBaseConnection.getInstance().getConnection();
+        String query = "Select * FROM " + tableName + ";";
+        PreparedStatement ps = connection.prepareStatement(query);
+        ResultSet rs = ps.executeQuery();
+
+        List<Digimon> digimons = new ArrayList<>();
+
+        while (rs.next()) {
+            Digimon digimon = new Digimon();
+            digimon.setId(rs.getInt("digimon_id"));
+            digimon.setName(rs.getString("digimon_name"));
+            digimon.setFirstAppearance(rs.getString("first_appearance"));
+            digimon.setLevel(rs.getString("level"));
+            digimon.setType(rs.getString("type"));
+            digimon.setSpecialAttack(rs.getString("special_attack"));
+            digimon.setImageRoute(rs.getString("image_route"));
+        }
+
+        return digimons;
     }
 }

@@ -22,9 +22,13 @@ public class CartaDigimon extends JFrame {
     public void initComponents() {
         JPanel mainPanel = new JPanel(new BorderLayout());
 
-        JPanel searchPanel = new JPanel(new BorderLayout());
-        JTextField searchBar = new JTextField("Buscar Digimon");
-        searchPanel.add(searchBar, BorderLayout.CENTER);
+        JPanel topPanel = new JPanel(new BorderLayout());
+
+        JButton backButton = new JButton("Volver al menú");
+        JLabel nameLabel = new JLabel(digimon.getName(), JLabel.CENTER);
+
+        topPanel.add(backButton, BorderLayout.WEST);
+        topPanel.add(nameLabel, BorderLayout.CENTER);
 
         JPanel imagePanel = new JPanel(new BorderLayout());
 
@@ -41,9 +45,30 @@ public class CartaDigimon extends JFrame {
             imagePanel.add(errorLabel);
         }
 
-        mainPanel.add(searchPanel, BorderLayout.NORTH);
+        JPanel infoPanel = new JPanel(new GridLayout(5,1));
+
+        infoPanel.add(createInfoLine("Nivel ", digimon.getLevel()));
+        infoPanel.add(createInfoLine("Tipo ", digimon.getType()));
+        infoPanel.add(createInfoLine("Ataque ", digimon.getSpecialAttack()));
+        infoPanel.add(createInfoLine("Primera Aparición ", digimon.getFirstAppearance()));
+
+        mainPanel.add(topPanel, BorderLayout.NORTH);
         mainPanel.add(imagePanel, BorderLayout.CENTER);
+        mainPanel.add(infoPanel, BorderLayout.SOUTH);
 
         add(mainPanel);
+    }
+
+    private JPanel createInfoLine(String label, String value) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+
+        JLabel lbl = new JLabel(label);
+        JLabel val = new JLabel(value);
+
+        panel.add(lbl, BorderLayout.WEST);
+        panel.add(val, BorderLayout.CENTER);
+
+        return panel;
     }
 }
