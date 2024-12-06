@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) throws SQLException {
         DigimonDAOImp digivice = new DigimonDAOImp();
-        Digimon digimon = digivice.readDigimon(16);
+        Digimon digimon = digivice.readDigimon(24);
         new CartaDigimon(digimon);
     }
 }
