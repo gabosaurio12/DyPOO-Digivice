@@ -1,19 +1,17 @@
 package mon.digivice;
 
+import mon.dao.DigimonDAO;
+import mon.dao.DigimonDAOImp;
 import mon.front.CartaDigimon;
 import mon.model.Digimon;
 
-public class Main {
-    public static void main(String[] args) {
-        Digimon digimon = new Digimon();
-        digimon.setName("Agumon");
-        digimon.setId(1);
-        digimon.setImageRoute("/images/agumon.jpg");
-        digimon.setType("Lagarto");
-        digimon.setLevel("Infante");
-        digimon.setSpecialAttack("Flama Bebé");
-        digimon.setFirstAppearance("Digimon Adventure");
+import java.sql.SQLException;
 
-        CartaDigimon digivice = new CartaDigimon(digimon);
+public class Main {
+    public static void main(String[] args) throws SQLException {
+        DigimonDAOImp digivice = new DigimonDAOImp();
+        Digimon digimon = digivice.readDigimon(8);
+
+        CartaDigimon digicard = new CartaDigimon(digimon);
     }
 }

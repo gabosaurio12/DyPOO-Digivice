@@ -4,6 +4,9 @@ import mon.model.Digimon;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class CartaDigimon extends JFrame {
     private final Digimon digimon;
@@ -24,16 +27,23 @@ public class CartaDigimon extends JFrame {
 
         JPanel topPanel = new JPanel(new BorderLayout());
 
-        JButton backButton = new JButton("Volver al menú");
+        JButton backButton = new JButton("Volver");
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+
         JLabel nameLabel = new JLabel(digimon.getName(), JLabel.CENTER);
 
         topPanel.add(backButton, BorderLayout.WEST);
-        topPanel.add(nameLabel, BorderLayout.CENTER);
 
         JPanel imagePanel = new JPanel(new BorderLayout());
+        imagePanel.add(nameLabel, BorderLayout.NORTH);
 
         try {
-            ImageIcon image = new ImageIcon(getClass().getResource(digimon.getImageRoute()));
+            ImageIcon image = new ImageIcon(Objects.requireNonNull(getClass().getResource("/images/" + digimon.getImageRoute())));
             Image imageScaled = image.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
             ImageIcon imageResized = new ImageIcon(imageScaled);
 
@@ -45,12 +55,11 @@ public class CartaDigimon extends JFrame {
             imagePanel.add(errorLabel);
         }
 
-        JPanel infoPanel = new JPanel(new GridLayout(5,1));
+        JPanel infoPanel = new JPanel(new BorderLayout());
 
-        infoPanel.add(createInfoLine("Nivel ", digimon.getLevel()));
-        infoPanel.add(createInfoLine("Tipo ", digimon.getType()));
-        infoPanel.add(createInfoLine("Ataque ", digimon.getSpecialAttack()));
-        infoPanel.add(createInfoLine("Primera Aparición ", digimon.getFirstAppearance()));
+        JTable infoTable = createTable(getTableInfo(digimon));
+
+        infoPanel.add(infoTable);
 
         mainPanel.add(topPanel, BorderLayout.NORTH);
         mainPanel.add(imagePanel, BorderLayout.CENTER);
@@ -59,16 +68,20 @@ public class CartaDigimon extends JFrame {
         add(mainPanel);
     }
 
-    private JPanel createInfoLine(String label, String value) {
-        JPanel panel = new JPanel();
-        panel.setLayout(new BorderLayout());
+    private String[][] getTableInfo(Digimon digimon) {
+        return new String[][]{
+                {"Nivel", digimon.getLevel()},
+                {"Tipo", digimon.getType()},
+                {"Ataque Especial", digimon.getSpecialAttack()},
+                {"Primera Aparición", digimon.getFirstAppearance()}
+        };
+    }
 
-        JLabel lbl = new JLabel(label);
-        JLabel val = new JLabel(value);
+    private JTable createTable(String[][] info) {
+        String[] columnNames = {"", ""};
+        JTable table = new JTable(info, columnNames);
+        table.setEnabled(false);
 
-        panel.add(lbl, BorderLayout.WEST);
-        panel.add(val, BorderLayout.CENTER);
-
-        return panel;
+        return table;
     }
 }
