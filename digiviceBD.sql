@@ -62,3 +62,4 @@ VALUES
 ('Gatomon', 'Digimon Adventure', 'Rookie', 'Vaccine', 'Cat’s Eye Hypnotism', 'gatomon.jpg'),
 ('Angewomon', 'Digimon Adventure', 'Champion', 'Vaccine', 'Celestial Arrow', 'angewomon.jpg');
 
+INSERT INTO user(user_name, user_password) VALUES('admin', '1234');
