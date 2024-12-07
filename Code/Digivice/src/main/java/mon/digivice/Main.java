@@ -1,15 +1,13 @@
 package mon.digivice;
 
-import mon.dao.DigimonDAOImp;
-import mon.front.CartaDigimon;
-import mon.model.Digimon;
-
-import java.sql.SQLException;
+import mon.front.Editor;
+import mon.front.Login;
+import mon.front.MainWindow;
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
-        DigimonDAOImp digivice = new DigimonDAOImp();
-        Digimon digimon = digivice.readDigimon(24);
-        new CartaDigimon(digimon);
+    public static void main(String[] args) {
+        new Login();
+        new MainWindow();
+        new Editor();
     }
 }

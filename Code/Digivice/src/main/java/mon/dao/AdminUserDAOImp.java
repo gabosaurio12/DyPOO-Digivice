@@ -11,7 +11,7 @@ public class AdminUserDAOImp implements AdminUserDAO {
     private final String tableName;
 
     public AdminUserDAOImp() {
-        tableName = "user";
+        tableName = "users";
     }
 
     @Override

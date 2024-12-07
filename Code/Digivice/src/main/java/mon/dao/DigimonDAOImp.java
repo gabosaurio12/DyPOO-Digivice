@@ -3,8 +3,6 @@ package mon.dao;
 import mon.database.DataBaseConnection;
 import mon.model.Digimon;
 
-import javax.xml.crypto.Data;
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -71,12 +69,12 @@ public class DigimonDAOImp implements DigimonDAO  {
 
     @Override
     public List<Digimon> readAllDigimon() throws SQLException {
+        List<Digimon> digimons = new ArrayList<>();
+
         Connection connection = DataBaseConnection.getInstance().getConnection();
         String query = "Select * FROM " + tableName + ";";
         PreparedStatement ps = connection.prepareStatement(query);
         ResultSet rs = ps.executeQuery();
-
-        List<Digimon> digimons = new ArrayList<>();
 
         while (rs.next()) {
             Digimon digimon = new Digimon();
@@ -87,8 +85,9 @@ public class DigimonDAOImp implements DigimonDAO  {
             digimon.setType(rs.getString("type"));
             digimon.setSpecialAttack(rs.getString("special_attack"));
             digimon.setImageRoute(rs.getString("image_route"));
-        }
 
+            digimons.add(digimon);
+        }
         return digimons;
     }
 }

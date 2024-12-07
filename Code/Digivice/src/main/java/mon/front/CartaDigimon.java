@@ -12,7 +12,7 @@ public class CartaDigimon extends JFrame {
     public CartaDigimon(Digimon digimon) {
         this.digimon = digimon;
 
-        setTitle("Digivice");
+        setTitle(digimon.getName());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 400);
 
@@ -28,9 +28,13 @@ public class CartaDigimon extends JFrame {
         JButton backButton = new JButton("Volver");
         backButton.addActionListener(e -> dispose());
 
+        JButton editButton  = new JButton("Editar");
+        editButton.addActionListener(e -> openEditWindow());
+
         JLabel nameLabel = new JLabel(digimon.getName(), JLabel.CENTER);
 
         topPanel.add(backButton, BorderLayout.WEST);
+        topPanel.add(editButton, BorderLayout.EAST);
 
         JPanel imagePanel = new JPanel(new BorderLayout());
         imagePanel.add(nameLabel, BorderLayout.NORTH);
@@ -59,6 +63,10 @@ public class CartaDigimon extends JFrame {
         mainPanel.add(infoPanel, BorderLayout.SOUTH);
 
         add(mainPanel);
+    }
+
+    public void openEditWindow() {
+
     }
 
     private String[][] getTableInfo(Digimon digimon) {
