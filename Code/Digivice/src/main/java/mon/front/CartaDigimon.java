@@ -22,8 +22,10 @@ public class CartaDigimon extends JFrame {
 
     public void initComponents() {
         JPanel mainPanel = new JPanel(new BorderLayout());
+        mainPanel.setBackground(new Color(173, 216, 230));
 
         JPanel topPanel = new JPanel(new BorderLayout());
+        topPanel.setBackground(new Color(135, 205, 250));
 
         JButton backButton = new JButton("Volver");
         backButton.addActionListener(e -> dispose());
@@ -32,11 +34,14 @@ public class CartaDigimon extends JFrame {
         editButton.addActionListener(e -> openEditWindow());
 
         JLabel nameLabel = new JLabel(digimon.getName(), JLabel.CENTER);
+        nameLabel.setFont(new Font("MonoSpaced", Font.BOLD, 18));
+        nameLabel.setForeground(new Color(255, 165, 0));
 
         topPanel.add(backButton, BorderLayout.WEST);
         topPanel.add(editButton, BorderLayout.EAST);
 
         JPanel imagePanel = new JPanel(new BorderLayout());
+        imagePanel.setBackground(new Color(240, 248, 255));
         imagePanel.add(nameLabel, BorderLayout.NORTH);
 
         try {
@@ -53,8 +58,10 @@ public class CartaDigimon extends JFrame {
         }
 
         JPanel infoPanel = new JPanel(new BorderLayout());
+        infoPanel.setBackground(new Color(224,255,255));
 
         JTable infoTable = createTable(getTableInfo(digimon));
+        infoTable.setFont(new Font("Monospaced", Font.PLAIN, 14));
 
         infoPanel.add(infoTable);
 
@@ -66,6 +73,7 @@ public class CartaDigimon extends JFrame {
     }
 
     public void openEditWindow() {
+        new Login();
 
     }
 

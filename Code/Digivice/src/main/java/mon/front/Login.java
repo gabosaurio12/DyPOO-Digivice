@@ -59,7 +59,7 @@ public class Login extends JFrame {
                     messageLabel.setText("Inicio de sesión exitoso");
                     JOptionPane.showMessageDialog(Login.this, "Bienvenido " + username);
                     dispose();
-                    new Editor();
+                    new Editor(new DigiManager());
                 } else {
                     messageLabel.setText("Usuario o contraseña incorrectos");
                 }

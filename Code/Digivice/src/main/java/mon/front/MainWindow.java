@@ -7,13 +7,13 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
-import java.util.HashSet;
+import java.util.*;
 import java.util.List;
-import java.util.Set;
 
 public class MainWindow extends JFrame{
     private final DigiManager manager = new DigiManager();
     private JList<String> digimonList;
+    private Map<String, Digimon> digimonMap;
 
     public MainWindow() {
         try {
@@ -29,14 +29,17 @@ public class MainWindow extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
+        getContentPane().setBackground(Color.BLACK);
+
         List <Digimon> digimonData = manager.readAllDigimons();
 
-        Set<String> digimonNamesSet = new HashSet<>();
+        digimonMap = new LinkedHashMap<>();
+
         for (Digimon digimon : digimonData) {
-            digimonNamesSet.add(digimon.getName());
+            digimonMap.put(digimon.getName(), digimon);
         }
 
-        String [] digimonNames = digimonNamesSet.toArray(new String[0]);
+        String [] digimonNames = digimonMap.keySet().toArray(new String[0]);
 
         DefaultListModel<String> listModel = new DefaultListModel<>();
         listModel.clear();
@@ -46,6 +49,10 @@ public class MainWindow extends JFrame{
 
         digimonList = new JList<>(listModel);
         digimonList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        digimonList.setForeground(new Color(0, 255, 0));
+        digimonList.setBackground(Color.BLACK);
+        digimonList.setFont(new Font("Monospaced", Font.PLAIN, 16));
 
         digimonList.addMouseListener(new MouseAdapter() {
             @Override

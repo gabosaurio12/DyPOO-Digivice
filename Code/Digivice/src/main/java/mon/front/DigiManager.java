@@ -15,4 +15,9 @@ public class DigiManager extends JFrame {
     }
 
 
+    public void updateDigimon(int id, String nuevoNombre) throws SQLException{
+        Digimon digi = new Digimon(id, nuevoNombre);
+        digiDao.editDigimonName(digi);
+    }
+
 }
