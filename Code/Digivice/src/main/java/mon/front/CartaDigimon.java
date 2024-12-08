@@ -38,7 +38,7 @@ public class CartaDigimon extends JFrame {
         nameLabel.setForeground(new Color(255, 165, 0));
 
         topPanel.add(backButton, BorderLayout.WEST);
-        topPanel.add(editButton, BorderLayout.EAST);
+		topPanel.add(backButton, BorderLayout.EAST);
 
         JPanel imagePanel = new JPanel(new BorderLayout());
         imagePanel.setBackground(new Color(240, 248, 255));

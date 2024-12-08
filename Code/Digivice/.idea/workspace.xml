@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e201fb3-7af5-4d74-a3ee-e17d9a9f41cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mon/front/DigiManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mon/front/Editor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mon/front/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mon/front/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAOImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAOImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mon/digivice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/digivice/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/CartaDigimon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/CartaDigimon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
