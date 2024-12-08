@@ -1,6 +1,7 @@
 package mon.front;
 
 import mon.dao.AdminUserDAOImp;
+import mon.model.Digimon;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,11 +11,13 @@ import java.sql.SQLException;
 
 
 public class Login extends JFrame {
+    private final Digimon digimon;
     private JTextField usernameField;
     private JPasswordField passwordField;
     private JLabel messageLabel;
 
-    public Login() {
+    public Login(Digimon digimon) {
+        this.digimon = digimon;
         setTitle("Login");
         setSize(500,300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,6 +25,7 @@ public class Login extends JFrame {
 
         initComponents();
 
+        setLocationRelativeTo(null);
         setVisible(true);
         pack();
     }
@@ -59,7 +63,7 @@ public class Login extends JFrame {
                     messageLabel.setText("Inicio de sesión exitoso");
                     JOptionPane.showMessageDialog(Login.this, "Bienvenido " + username);
                     dispose();
-                    new Editor(new DigiManager());
+                    new Editor(new DigiManager(), digimon);
                 } else {
                     messageLabel.setText("Usuario o contraseña incorrectos");
                 }

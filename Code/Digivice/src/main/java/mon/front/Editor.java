@@ -1,5 +1,7 @@
 package mon.front;
 
+import mon.model.Digimon;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,12 +9,13 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
 public class Editor extends JFrame {
+    private final Digimon digimon;
+    private final DigiManager manager;
 
-    private DigiManager manager;
-    public Editor(DigiManager manager) {
-
+    public Editor(DigiManager manager, Digimon digimon) {
+        this.digimon = digimon;
         this.manager = manager;
-        setSize(350, 200);
+        setSize(300, 100);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -20,21 +23,15 @@ public class Editor extends JFrame {
         placeComponent(panel);
 
         add(panel, BorderLayout.CENTER);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
     private void placeComponent(JPanel panel){
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-        JLabel idLabel = new JLabel("Introduce el id de digimon");
-
-        JTextField idField = new JTextField(3);
-
         JLabel nameLabel = new JLabel("Introduce el nuevo nombre de digimon:");
-        JTextField nameField = new JTextField(30);
-
-        panel.add(idLabel);
-        panel.add(idField);
+        JTextField nameField = new JTextField();
 
         panel.add(nameLabel);
         panel.add(nameField);
@@ -43,30 +40,25 @@ public class Editor extends JFrame {
         updateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                updateDigimon(idField.getText(), nameField.getText());
+                updateDigimon(digimon.getId(), nameField.getText());
             }
         });
 
         panel.add(updateButton);
     }
 
-    private void updateDigimon(String idText, String newName){
-        if(idText.isEmpty() || newName.isEmpty()){
-            JOptionPane.showMessageDialog(this, "El ID y el nombre no pueden estar vacíos");
+    private void updateDigimon(int id, String newName){
+        if(newName.isEmpty()){
+            JOptionPane.showMessageDialog(this, "El nombre no puede estar vacío");
             return;
         }
 
         try{
-            int id = Integer.parseInt(idText);
-
             manager.updateDigimon(id, newName);
             JOptionPane.showMessageDialog(this, "Digimon actualizado correctamente");
             dispose();
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Error actualizando el Digimon: " + e.getMessage());
-        } catch (NumberFormatException e) {
-           JOptionPane.showMessageDialog(this, "El ID debe de ser un número valido");
         }
-
     }
 }

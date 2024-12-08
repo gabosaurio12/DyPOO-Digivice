@@ -62,6 +62,7 @@ public class MainWindow extends JFrame{
                     if(selectedIndex != -1){
                         Digimon selectedDigimon = digimonData.get(selectedIndex);
                         new CartaDigimon(selectedDigimon).setVisible(true);
+                        dispose();
                     }
                 }
             }
@@ -70,6 +71,7 @@ public class MainWindow extends JFrame{
         JScrollPane scrollPane = new JScrollPane(digimonList);
         add(scrollPane, BorderLayout.CENTER);
 
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 }

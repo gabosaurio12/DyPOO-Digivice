@@ -4,6 +4,8 @@ import mon.model.Digimon;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class CartaDigimon extends JFrame {
@@ -17,6 +19,7 @@ public class CartaDigimon extends JFrame {
         setSize(300, 400);
 
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
@@ -28,7 +31,13 @@ public class CartaDigimon extends JFrame {
         topPanel.setBackground(new Color(135, 205, 250));
 
         JButton backButton = new JButton("Volver");
-        backButton.addActionListener(e -> dispose());
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new MainWindow();
+            }
+        });
 
         JButton editButton  = new JButton("Editar");
         editButton.addActionListener(e -> openEditWindow());
@@ -38,7 +47,7 @@ public class CartaDigimon extends JFrame {
         nameLabel.setForeground(new Color(255, 165, 0));
 
         topPanel.add(backButton, BorderLayout.WEST);
-		topPanel.add(backButton, BorderLayout.EAST);
+		topPanel.add(editButton, BorderLayout.EAST);
 
         JPanel imagePanel = new JPanel(new BorderLayout());
         imagePanel.setBackground(new Color(240, 248, 255));
@@ -73,7 +82,7 @@ public class CartaDigimon extends JFrame {
     }
 
     public void openEditWindow() {
-        new Login();
+        new Login(digimon);
 
     }
 
