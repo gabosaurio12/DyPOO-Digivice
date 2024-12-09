@@ -7,6 +7,10 @@ import javax.swing.*;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * Esta clase es la conexión entre el frontend y el backend
+ */
+
 public class DigiManager extends JFrame {
     public final DigimonDAOImp digiDao = new DigimonDAOImp();
 

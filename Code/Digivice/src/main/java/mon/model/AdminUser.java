@@ -1,5 +1,10 @@
 package mon.model;
 
+/**
+ * Esta clase representa al usuario Admin, el cual tiene el poder de
+ * editar la información en la base de datos
+ */
+
 public class AdminUser {
     private String userName;
     private String userPassword;

@@ -8,6 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
 
+/**
+ * Representa una carta de Digimon
+ * Cda carta tiene los datos y la imagen del Digimon
+ *
+ * @author Liz
+ * @version 1.0
+ */
+
 public class CartaDigimon extends JFrame {
     private final Digimon digimon;
 

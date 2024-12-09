@@ -1,5 +1,9 @@
 package mon.model;
 
+/**
+ * Esta clase representa un Digimon en el sistema.
+ */
+
 public class Digimon {
     private int id;
     private String name;

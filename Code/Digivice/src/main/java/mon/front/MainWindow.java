@@ -10,6 +10,14 @@ import java.sql.SQLException;
 import java.util.*;
 import java.util.List;
 
+/**
+ * Ventana principal de la aplicación que maneja la interfaz de usuario.
+ * Permite la visualizacion de los Digimones y sus cartas
+ *
+ * @author Lizeth
+ * @version 1.0
+ */
+
 public class MainWindow extends JFrame{
     private final DigiManager manager = new DigiManager();
     private JList<String> digimonList;

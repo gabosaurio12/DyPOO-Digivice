@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e201fb3-7af5-4d74-a3ee-e17d9a9f41cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAOImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAOImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/database/DataBaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/database/DataBaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mon/digivice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/digivice/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/CartaDigimon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/CartaDigimon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/DigiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/DigiManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/Editor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mon/test/DAOTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/model/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/model/AdminUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/model/Digimon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/model/Digimon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,24 +50,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.DAOTest.executor": "Run",
-    "Gradle.Digivice [:mon.digivice.Main.main()].executor": "Run",
-    "Gradle.Digivice [:mon.front.Login.main()].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.DAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Digivice [:mon.digivice.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Digivice [:mon.front.Login.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />

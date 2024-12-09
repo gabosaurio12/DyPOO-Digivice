@@ -2,6 +2,13 @@ package mon.database;
 
 import java.sql.*;
 
+/**
+ * Esta clase maneja la conexión con la base de datos
+ *
+ * @author Lizeth
+ * @version 1.0
+ */
+
 public class DataBaseConnection {
     private static DataBaseConnection instance;
     private Connection connection;

@@ -10,6 +10,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Esta clase presenta metodos para crear, leer, actualizar
+ * y eliminar datos en la tabla de Digimon
+ */
+
 public class DigimonDAOImp implements DigimonDAO  {
     private final String tableName = "digimon";
 

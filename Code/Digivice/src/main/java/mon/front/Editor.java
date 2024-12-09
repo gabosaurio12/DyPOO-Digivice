@@ -8,6 +8,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
+/**
+ * Esta clase gestiona la ventana editor una vez que el login
+ * haya sido exitoso
+ */
+
 public class Editor extends JFrame {
     private final Digimon digimon;
     private final DigiManager manager;

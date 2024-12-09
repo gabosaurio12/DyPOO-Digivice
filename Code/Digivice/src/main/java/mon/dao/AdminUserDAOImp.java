@@ -7,6 +7,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Esta clase maneja las operaciones CRUD de la base de datos
+ * Proporciona metodos para autenticar al usuario
+ */
+
 public class AdminUserDAOImp implements AdminUserDAO {
     private final String tableName;
 

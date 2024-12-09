@@ -9,6 +9,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
+/**
+ * Esta clase gestiona la ventana de inicio de sesion de la aplicacion
+ * Permite al usario ingresar sus credenciales para acceder a la edicion
+ *
+ * @author Lizeth
+ * @version 1.0
+ */
 
 public class Login extends JFrame {
     private final Digimon digimon;
