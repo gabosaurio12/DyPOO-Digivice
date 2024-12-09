@@ -19,11 +19,12 @@ import java.util.List;
  */
 
 public class MainWindow extends JFrame{
-    private final DigiManager manager = new DigiManager();
+    private final DigiManager manager;
     private JList<String> digimonList;
     private Map<String, Digimon> digimonMap;
 
     public MainWindow() {
+        manager = new DigiManager();
         try {
             setUpUI();
         } catch (SQLException e) {

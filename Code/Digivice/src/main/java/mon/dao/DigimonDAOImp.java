@@ -19,21 +19,6 @@ public class DigimonDAOImp implements DigimonDAO  {
     private final String tableName = "digimon";
 
     @Override
-    public void addDigimon(Digimon digimon) throws SQLException {
-        Connection connection = DataBaseConnection.getInstance().getConnection();
-        String query = "INSERT INTO " + tableName + " values (?, ?, ?, ?, ?, ?);";
-        PreparedStatement ps = connection.prepareStatement(query);
-        ps.setString(1, digimon.getName());
-        ps.setString(2, digimon.getFirstAppearance());
-        ps.setString(3, digimon.getLevel());
-        ps.setString(4, digimon.getType());
-        ps.setString(5, digimon.getSpecialAttack());
-        ps.setString(6, digimon.getImageRoute());
-
-        ps.execute();
-    }
-
-    @Override
     public Digimon readDigimon(int id) throws SQLException {
         Connection connection = DataBaseConnection.getInstance().getConnection();
         String query = "SELECT digimon_id, digimon_name, first_appearance, level, type, special_attack, image_route FROM " + tableName + " WHERE digimon_id = ?";
@@ -60,15 +45,6 @@ public class DigimonDAOImp implements DigimonDAO  {
         PreparedStatement ps = connection.prepareStatement(query);
         ps.setString(1, digimon.getName());
         ps.setInt(2, digimon.getId());
-        ps.executeUpdate();
-    }
-
-    @Override
-    public void deleteDigimon(Digimon digimon) throws SQLException {
-        Connection connection = DataBaseConnection.getInstance().getConnection();
-        String query = "DELETE FROM " + tableName + " WHERE digimon_id = ?";
-        PreparedStatement ps = connection.prepareStatement(query);
-        ps.setInt(1, digimon.getId());
         ps.executeUpdate();
     }
 

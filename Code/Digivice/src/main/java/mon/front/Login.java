@@ -1,6 +1,7 @@
 package mon.front;
 
 import mon.dao.AdminUserDAOImp;
+import mon.model.AdminUser;
 import mon.model.Digimon;
 
 import javax.swing.*;
@@ -62,13 +63,12 @@ public class Login extends JFrame {
     public class LoginAction implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            String username = usernameField.getText();
-            String password = new String(passwordField.getPassword());
+            AdminUser user = new AdminUser(usernameField.getText(), new String(passwordField.getPassword()));
 
             try {
-                if (new AdminUserDAOImp().authenticateUser(username, password)) {
+                if (new AdminUserDAOImp().authenticateUser(user)) {
                     messageLabel.setText("Inicio de sesión exitoso");
-                    JOptionPane.showMessageDialog(Login.this, "Bienvenido " + username);
+                    JOptionPane.showMessageDialog(Login.this, "Bienvenido " + user.getUserName());
                     dispose();
                     new Editor(new DigiManager(), digimon);
                 } else {

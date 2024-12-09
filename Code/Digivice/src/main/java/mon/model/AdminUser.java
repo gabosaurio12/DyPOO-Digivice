@@ -6,11 +6,19 @@ package mon.model;
  */
 
 public class AdminUser {
-    private String userName;
-    private String userPassword;
+    private final String userName;
+    private final String userPassword;
 
     public AdminUser(String userName, String userPassword) {
         this.userName = userName;
         this.userPassword = userPassword;
     }
-}
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+ }

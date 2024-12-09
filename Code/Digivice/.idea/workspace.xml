@@ -7,6 +7,7 @@
     <list default="true" id="8e201fb3-7af5-4d74-a3ee-e17d9a9f41cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAOImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAOImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/database/DataBaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/database/DataBaseConnection.java" afterDir="false" />
@@ -17,6 +18,18 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/MainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/model/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/model/AdminUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mon/model/Digimon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/model/Digimon.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/AdminUserDAOImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/dao/DigimonDAOImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/DigiManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/DigiManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/Digivice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/front/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mon/front/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mon/model/AdminUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DAOTest.java" afterDir="false" />
+>>>>>>> 8b58c5b (Correcciones por diseño)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,5 +96,16 @@
       <updated>1733441263954</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mon/front/CartaDigimon.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

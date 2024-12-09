@@ -1,11 +1,10 @@
 import mon.dao.AdminUserDAOImp;
 import mon.dao.DigimonDAOImp;
+import mon.model.AdminUser;
 import mon.model.Digimon;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,7 +24,7 @@ public class DAOTest {
 
         for (int i = 4; i < 7; i++) {
             Digimon digimon = digiDAO.readDigimon(i);
-            assertNotEquals(namesNotExpected[i-4], digimon.getName());
+            assertNotEquals(namesNotExpected[i-4], digimon.getName(), "La prueba será exitosa si los nombres son diferentes");
         }
     }
 
@@ -33,13 +32,12 @@ public class DAOTest {
     public void AmdinUserDAOTest() throws SQLException {
         AdminUserDAOImp adminDAO = new AdminUserDAOImp();
 
-        Map<String, String> fakeUsers = new HashMap<>();
-        fakeUsers.put("Michael", "678578");
-        fakeUsers.put("José", "superContraseña");
-        fakeUsers.put("usuario", "contraseña");
+        AdminUser[] fakeUsers = {new AdminUser("Michael", "678578"),
+                new AdminUser("José", "superContraseña"),
+                new AdminUser("usuario", "contraseña")};
 
-        for (Map.Entry<String, String> i : fakeUsers.entrySet()) {
-            assertFalse(adminDAO.authenticateUser(i.getKey(), i.getValue()));
+        for (int i = 0; i < 3; i++) {
+            assertFalse(adminDAO.authenticateUser(fakeUsers[i]));
         }
     }
 }
